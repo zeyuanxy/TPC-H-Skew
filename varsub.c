@@ -1,7 +1,7 @@
 /* Sccsid:     @(#)varsub.c	9.1.1.25     5/1/96  11:52:23 */
 #include <stdio.h>
 #ifndef _POSIX_SOURCE
-#include <malloc.h>
+#include <stdlib.h>
 #endif /* POSIX_SOURCE */
 #if (defined(_POSIX_)||!defined(WIN32))
 #include <unistd.h>

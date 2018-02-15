@@ -40,3 +40,4 @@ data/*
 dbgen
 qgen
 *.swp # vim swp file
+*.csv
