@@ -4,8 +4,8 @@
 SELECT o_orderpriority, 
        Count(*) AS order_count 
 FROM   orders 
-WHERE  (o_orderdate >= DATE '1996-03-01')
-       AND (o_orderdate < DATE '1996-03-01' + interval '3' month)
+WHERE  (o_orderdate >= DATE '1996-03-01'
+       AND (o_orderdate < DATE '1996-03-01' + interval '3' month))
        AND EXISTS (SELECT * 
                    FROM   lineitem 
                    WHERE  l_orderkey = o_orderkey 
