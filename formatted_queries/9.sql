@@ -17,6 +17,7 @@ WHERE  s_suppkey = l_suppkey
        AND ps_suppkey = l_suppkey 
        AND ps_partkey = l_partkey 
        AND p_partkey = l_partkey 
+       AND ps_partkey = p_partkey
        AND o_orderkey = l_orderkey 
        AND s_nationkey = n_nationkey 
        AND (p_name LIKE '%orchid%')

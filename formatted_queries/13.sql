@@ -3,6 +3,7 @@
 
 SELECT c_custkey, 
        Count(o_orderkey) 
-FROM   customer, orders 
-WHERE c_custkey = o_custkey 
-                       AND (o_comment NOT LIKE '%pending%packages%');
+FROM   customer 
+       LEFT OUTER JOIN orders 
+                    ON c_custkey = o_custkey 
+                       AND o_comment NOT LIKE '%pending%packages%' 
